@@ -1,0 +1,1 @@
+# genetik-algoritma-kutu-tasarimi
