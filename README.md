@@ -1,35 +1,35 @@
-# Genetik Algoritma ile Kargo Kutusu Optimizasyonu (Senaryo 6)
+# Cargo Box Optimization using Genetic Algorithm (Scenario 6)
 
-Bu proje, BLG-307 Yapay Zeka Sistemleri dersi kapsamında hazırlanmıştır.
+This project was developed as part of the **BLG-307 Artificial Intelligence Systems** course.
+* **Student:** Bahadır Beldek
+* **Student ID:** 2112721066
 
-**Öğrenci:** [Bahadır Beldek]  
-**Numara:** [2112721066]
+## Project Description
+This project aims to find the optimal cargo box dimensions (width and height) for an e-commerce company using a **Genetic Algorithm**. The objective is to maximize the volume while minimizing the material cost.
 
-Proje Tanımı
-Bir e-ticaret firması için, hacmi maksimize ederken malzeme maliyetini minimize edecek **optimum kargo kutusu boyutlarını (genişlik ve yükseklik)** Genetik Algoritma kullanarak bulmayı amaçlar.
+* **Selected Scenario:** Scenario 6
+* **Objective Function:** `y = x1*x2 - 0.1*x1^2 - 0.1*x2^2`
 
-Seçilen Senaryo: Senaryo 6
-* **Amaç Fonksiyonu:** `y = x1*x2 - 0.1*x1^2 - 0.1*x2^2`
-* **Değişkenler:**
-    * x1 (Genişlik): [10, 40] cm
-    * x2 (Yükseklik): [5, 20] cm
+### Variables
+* **x1 (Width):** [10, 40] cm
+* **x2 (Height):** [5, 20] cm
 
-### Kısıtlar (Constraints)
-1.  **Raf Sınırı:** `x1 * x2 <= 600`
-2.  **Minimum Genişlik:** `x1 >= 15`
+### Constraints
+* **Shelf Limit:** `x1 * x2 <= 600`
+* **Minimum Width:** `x1 >= 15`
 
-Kullanılan Yöntemler
-Projede Python dili ve aşağıdaki Genetik Algoritma mekanizmaları kullanılmıştır:
-* **Popülasyon:** 50 Birey
-* **Seçilim (Selection):** Turnuva Seçimi (Tournament Selection)
-* **Çaprazlama (Crossover):** Tek Noktalı / Karışık Çaprazlama
-* **Mutasyon (Mutation):** Rastgele değer atama (%10 oranında)
-* **Ceza Yöntemi (Penalty):** Kısıtları sağlamayan bireylere çok düşük puan (-9999) verilerek elenmeleri sağlanmıştır.
+## Methods Used
+The project is implemented in Python, utilizing the following Genetic Algorithm mechanisms:
+* **Population Size:** 50 Individuals
+* **Selection:** Tournament Selection
+* **Crossover:** Single-Point / Uniform Crossover
+* **Mutation:** Random value assignment (10% mutation rate)
+* **Penalty Method:** Individuals failing to meet the constraints are severely penalized (score: -9999) to ensure their elimination from the gene pool.
 
-Kurulum ve Çalıştırma
-1.  Bu repodaki `.ipynb` uzantılı dosyayı indirin.
-2.  Google Colab üzerinden veya Jupyter Notebook ile dosyayı açın.
-3.  Tüm hücreleri sırasıyla çalıştırın.
+## Installation and Execution
+1. Download the `.ipynb` file from this repository.
+2. Open the file using **Google Colab** or **Jupyter Notebook**.
+3. Run all cells sequentially.
 
-Sonuçlar
-Algoritma sonucunda kısıtları sağlayan en iyi x1 ve x2 değerleri bulunmuş ve gelişim grafiği çizdirilmiştir.
+## Results
+The algorithm successfully identifies the best `x1` and `x2` values that satisfy all constraints. The evolutionary progress of the population across generations is also visualized via an output graph.
